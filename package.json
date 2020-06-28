@@ -1,6 +1,6 @@
 {
   "name": "@allanalves23/jsvalidators",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JS validators",
   "main": "index.js",
   "scripts": {
