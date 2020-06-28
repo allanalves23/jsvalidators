@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/allanalves23/cm-validator.git"
+    "url": "http://github.com/allanalves23/jsvalidators.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
