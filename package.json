@@ -1,10 +1,10 @@
 {
   "name": "@allanalves23/jsvalidators",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS validators",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,10 +15,17 @@
   },
   "keywords": [
     "validation",
-    "cm-validator",
+    "jsvalidator",
     "email validator",
     "password validator"
   ],
-  "author": "Allan Wanderley Alves",
-  "license": "MIT"
+  "author": {
+    "name": "Allan Wanderley Alves",
+    "email": "awallan259@gmail.com",
+    "url": "http://allanalves23.top"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
 }
