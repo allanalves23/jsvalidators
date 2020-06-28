@@ -12,7 +12,7 @@ class Validatorz {
      * @param {String} msg A Throwable message.
      */
     exists(value, msg = "This value doesn't exists") {
-      if (!value && typeof value !== 'number') throw msg
+      if (!value && typeof value !== 'number' && typeof value !== 'boolean') throw msg
       if (Array.isArray(value) && value.length === 0) throw msg
       if (typeof value === 'string' && !value.trim()) throw msg
     }
@@ -60,18 +60,18 @@ class Validatorz {
   
     /**
      * @function
-     * @description Validates a birth date with a minimum and maximum acceptable year.
-     * @param {String} date A Date in String format.
+     * @description Validates a date with a minimum and maximum acceptable year.
+     * @param {String | Date} date The Date.
      * @param {Number} minYear Minimum year.
+     * @param {Number} minYear Maximum year.
      * @param {String} msg A Throwable message.
      */
-    validateBirthDate (date, minYear, msg) {
+    validateDate (date, msg = 'Invalid date', minYear = new Date().getFullYear() - 100, maxYear = new Date().getFullYear()) {
       exists(date, msg)
-      const aux = date.split('-')
-      if (aux[0] < minYear) throw `Anos menores de ${minYear} não são aceitos`
-      if (aux[0] >= app.moment().get('year')) {
-        throw msg || 'Datas maiores que hoje não são permitidas'
-      }
+      const _date = new Date(date);
+      const _year = _date.getFullYear()
+      if (_year < minYear) throw msg || `Dates below ${minYear} is not accepted`
+      if (_year > maxYear) throw msg || `Dates above ${maxYear} is not accepted`
     }
   
     /**
