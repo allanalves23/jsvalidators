@@ -1,0 +1,17 @@
+{
+  "name": "cm-validator",
+  "version": "0.0.1",
+  "description": "JS validators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "validation",
+    "cm-validator",
+    "email validator",
+    "password validator"
+  ],
+  "author": "Allan Wanderley Alves",
+  "license": "MIT"
+}
