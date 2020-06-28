@@ -1,10 +1,17 @@
 {
-  "name": "cm-validator",
+  "name": "@allanalves23/jsvalidators",
   "version": "0.0.1",
   "description": "JS validators",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/allanalves23/cm-validator.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "validation",
