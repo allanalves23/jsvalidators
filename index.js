@@ -1,10 +1,10 @@
 /**
  * @function
  * @author Allan Wanderley Alves
- * @module validatorz
+ * @module jsvalidator
  * @description Some functions for validate some data types.
  */
-class Validatorz {
+class JsValidator {
     /**
      * @function
      * @description Verify if value exists.
@@ -105,4 +105,4 @@ class Validatorz {
     }
   }
   
-module.exports = new Validatorz();
+module.exports = new JsValidator();
