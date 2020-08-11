@@ -57,7 +57,7 @@ class JsValidator {
      * @returns {Boolean} True if email is valid.
      */
     emailIsValid(email) {
-      this.exists(email, msg)
+      this.exists(email)
       return !(email.includes('@') && email.includes('.'))
     }
   
