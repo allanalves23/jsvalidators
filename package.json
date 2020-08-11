@@ -1,6 +1,6 @@
 {
   "name": "@allanalves23/jsvalidators",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "JS validators",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "url": "http://github.com/allanalves23/jsvalidators.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
   "keywords": [
