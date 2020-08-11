@@ -9,28 +9,26 @@ class JsValidator {
      * @function
      * @description Verify if value exists.
      * @param {String | Array | Boolean | Number} value String, Arrays, Boolean, etc.
-     * @param {String} msg A Throwable message.
+     * 
+     * @returns {Boolean} True if exists any element.
      */
-    exists(value, msg = "This value doesn't exists") {
-      if (!value && typeof value !== 'number' && typeof value !== 'boolean') throw msg
-      if (Array.isArray(value) && value.length === 0) throw msg
-      if (typeof value === 'string' && !value.trim()) throw msg
+    exists(value) {
+      if (!value && typeof value !== 'number' && typeof value !== 'boolean') return false
+      if (Array.isArray(value) && value.length === 0) return false
+      if (typeof value === 'string' && !value.trim()) return false
+      
+      return true;
     }
   
     /**
      * @function
      * @description Verify if value doesn't exists.
      * @param {String | Array | Boolean | Number} value String, Arrays, Boolean, etc.
-     * @param {String} msg A Throwable message.
+     * 
+     * @returns {Boolean} True if **not** exist any element.
      */
-    notExists(value, msg = 'This value exists') {
-      try {
-        exists(value, msg)
-      } catch (msg) {
-        return
-      }
-  
-      throw msg
+    notExists(value) {
+      return !exists(value)
     }
   
     /**
@@ -38,24 +36,29 @@ class JsValidator {
      * @description Validates a password.
      * @param {String} password A string password not ciphered.
      * @param {Number} length Maximum size for the password.
-     * @param {String} msg A Throwable message.
+     * 
+     * @returns {Boolean} True if password is valid.
      */
-    validatePassword (password, length, msg = 'This password is weak') {
+    passwordIsValid (password, length) {
       const _pass = password.trim() 
-      exists(_pass, msg)
-      if (_pass.length < length) throw msg || `The password should have ${length} characters`
-      if (_pass.includes(' ')) throw msg || "The password can't had white spaces"
+      if(this.notExists(_pass)) return false
+
+      if (_pass.length < length) return false
+      if (_pass.includes(' ')) return false
+
+      return true
     }
   
     /**
      * @function
      * @description Validates an email.
      * @param {String} email The email.
-     * @param {String} msg A Throwable message.
+     * 
+     * @returns {Boolean} True if email is valid.
      */
-    validateEmail(email, msg = 'This email is not correct') {
+    emailIsValid(email) {
       exists(email, msg)
-      if (!(email.includes('@') && email.includes('.'))) throw msg
+      return !(email.includes('@') && email.includes('.'))
     }
   
     /**
