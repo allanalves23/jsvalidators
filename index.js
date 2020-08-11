@@ -28,7 +28,7 @@ class JsValidator {
      * @returns {Boolean} True if **not** exist any element.
      */
     notExists(value) {
-      return !exists(value)
+      return !this.exists(value)
     }
   
     /**
@@ -57,7 +57,7 @@ class JsValidator {
      * @returns {Boolean} True if email is valid.
      */
     emailIsValid(email) {
-      exists(email, msg)
+      this.exists(email, msg)
       return !(email.includes('@') && email.includes('.'))
     }
   
@@ -70,7 +70,7 @@ class JsValidator {
      * @param {String} msg A Throwable message.
      */
     validateDate (date, msg = 'Invalid date', minYear = new Date().getFullYear() - 100, maxYear = new Date().getFullYear()) {
-      exists(date, msg)
+      this.exists(date, msg)
       const _date = new Date(date);
       const _year = _date.getFullYear()
       if (_year < minYear) throw msg || `Dates below ${minYear} is not accepted`
