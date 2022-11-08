@@ -11,7 +11,6 @@
 ## Contact information:
 
 If necessary submit an issue on this repository.
-
 ___
 
 ## Install
