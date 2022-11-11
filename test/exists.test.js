@@ -1,5 +1,5 @@
 const assert = require('assert')
-const jsvalidators = require('../index')
+const jsvalidators = require('../src/index')
 
 describe('Exists elements', () => {
     it('in Array', () => {
