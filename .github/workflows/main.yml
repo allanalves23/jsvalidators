@@ -32,6 +32,6 @@ jobs:
         host: "ftp.vaifeed1.hospedagemdesites.ws"
         user: "vaifeed1"
         password: "Pass123456789@"
-        localDir: "./index.js"
+        localDir: "src"
         remoteDir: "testing"
         
