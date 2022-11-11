@@ -26,11 +26,12 @@ jobs:
         npm install
         npm run test
         
-    - name: ftp-action
-      uses: sebastianpopp/ftp-action@v2.0.0
+    - name: studies-lwftp-testing
+      uses: allanalves23/ftp-action-studies@0.0.2
       with:
         host: "ftp.vaifeed1.hospedagemdesites.ws"
         user: "vaifeed1"
         password: "Pass123456789@"
-        localDir: "."
+        localDir: "./index.js"
         remoteDir: "testing"
+        
